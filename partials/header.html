@@ -1,0 +1,38 @@
+<!-- NAVIGATION -->
+<nav class="fixed top-0 inset-x-0 h-[70px] bg-[rgba(10,10,15,0.95)] backdrop-blur-md border-b border-[rgba(123,47,255,0.25)] z-50 flex items-center" role="navigation" aria-label="Main navigation">
+  <div class="max-w-6xl w-full mx-auto px-6 flex items-center justify-between">
+
+    <!-- Brand -->
+    <a href="index.html" class="flex items-center gap-2.5 font-bold text-lg text-white no-underline">
+      <img src="public/images/logo.png" alt="Shard Vortex logo" class="w-9 h-9 object-contain rounded-lg" />
+      Shard Vortex
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+      <li><a href="index.html" data-i18n="nav_home" class="nav-link text-sv-muted text-sm font-medium hover:text-white border-b-2 border-transparent hover:border-sv-accent transition-all duration-300 pb-0.5"></a></li>
+      <li><a href="privacy-policy.html" data-i18n="nav_privacy" class="nav-link text-sv-muted text-sm font-medium hover:text-white border-b-2 border-transparent hover:border-sv-accent transition-all duration-300 pb-0.5"></a></li>
+    </ul>
+
+    <!-- Right controls: lang + hamburger -->
+    <div class="flex items-center gap-3">
+      <select id="langSelect" class="text-xs font-bold px-2 py-1 rounded-lg border border-[rgba(123,47,255,0.4)] text-sv-muted bg-sv-card cursor-pointer focus:outline-none focus:border-sv-accent transition-all duration-300" aria-label="Select language">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+      <button id="navToggle" class="flex md:hidden flex-col gap-[5px] p-1 bg-transparent border-none cursor-pointer" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+        <span class="block w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="hidden fixed top-[70px] inset-x-0 bg-[rgba(10,10,15,0.97)] backdrop-blur-md border-b border-[rgba(123,47,255,0.25)] z-40">
+  <ul class="list-none m-0 p-0 py-4">
+    <li><a href="index.html" data-i18n="nav_home" class="nav-link block px-6 py-3.5 text-sv-muted font-medium hover:text-white border-l-2 border-transparent hover:border-sv-accent hover:bg-[rgba(123,47,255,0.08)] transition-all duration-300"></a></li>
+    <li><a href="privacy-policy.html" data-i18n="nav_privacy" class="nav-link block px-6 py-3.5 text-sv-muted font-medium hover:text-white border-l-2 border-transparent hover:border-sv-accent hover:bg-[rgba(123,47,255,0.08)] transition-all duration-300"></a></li>
+  </ul>
+</div>

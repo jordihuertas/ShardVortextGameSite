@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shard Vortex Privacy Policy — We do not collect any user data." />
+  <title>Privacy Policy — Shard Vortex</title>
+  <link rel="icon" type="image/png" href="public/images/logo.png" />
+  <!-- Tailwind CSS CDN (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sv-bg':     '#0a0a0f',
+            'sv-card':   '#12121c',
+            'sv-accent': '#7b2fff',
+            'sv-cyan':   '#00e5ff',
+            'sv-muted':  '#9090b0',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-sv-bg text-gray-200 overflow-x-hidden" data-page="privacy">
+
+  <div id="site-header"></div>
+
+  <!-- PAGE HERO -->
+  <div class="relative flex items-center justify-center text-center overflow-hidden pt-[70px] min-h-[40vh]">
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(123,47,255,0.25) 0%, transparent 70%);"></div>
+    <div class="relative z-10 px-6 py-16">
+      <h1 data-i18n="pp_title" class="text-4xl md:text-5xl font-black text-white mb-3"></h1>
+      <p class="text-sv-muted text-sm">
+        <span data-i18n="pp_last_updated"></span>: <span id="lastUpdated"></span>
+      </p>
+    </div>
+  </div>
+
+  <!-- POLICY CONTENT -->
+  <section class="py-20 px-6 bg-sv-bg">
+    <div class="max-w-[760px] mx-auto">
+      <div class="bg-sv-card border border-[rgba(123,47,255,0.25)] rounded-xl p-8 md:p-12 fade-in">
+
+        <!-- Highlight box -->
+        <div class="flex items-start gap-3 bg-[rgba(123,47,255,0.1)] border border-[rgba(123,47,255,0.35)] rounded-xl p-5 mb-8">
+          <span class="text-2xl flex-shrink-0 mt-0.5">&#x1F512;</span>
+          <p data-i18n-html="pp_highlight" class="text-gray-200 text-base leading-relaxed m-0"></p>
+        </div>
+
+        <!-- Overview -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3 first:mt-0">
+          <span>&#x1F4CB;</span>
+          <span data-i18n="pp_overview_title"></span>
+        </h2>
+        <p data-i18n-html="pp_overview_text" class="text-sv-muted leading-relaxed mb-3"></p>
+
+        <!-- No Data Collection -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x1F4F5;</span>
+          <span data-i18n="pp_no_data_title"></span>
+        </h2>
+        <p data-i18n-html="pp_no_data_intro" class="text-sv-muted leading-relaxed mb-3"></p>
+        <ul data-i18n-list="pp_no_data_items" data-item-class="text-sv-muted leading-relaxed mb-2" class="list-disc pl-6 mb-3"></ul>
+
+        <!-- No Analytics -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x1F4CA;</span>
+          <span data-i18n="pp_analytics_title"></span>
+        </h2>
+        <p data-i18n-html="pp_analytics_intro" class="text-sv-muted leading-relaxed mb-3"></p>
+        <ul data-i18n-list="pp_analytics_items" data-item-class="text-sv-muted leading-relaxed mb-2" class="list-disc pl-6 mb-3"></ul>
+
+        <!-- No Data Sharing -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x1F91D;</span>
+          <span data-i18n="pp_sharing_title"></span>
+        </h2>
+        <p data-i18n="pp_sharing_text" class="text-sv-muted leading-relaxed mb-3"></p>
+
+        <!-- No Cloud Storage -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x2601;&#xFE0F;</span>
+          <span data-i18n="pp_cloud_title"></span>
+        </h2>
+        <p data-i18n="pp_cloud_text" class="text-sv-muted leading-relaxed mb-3"></p>
+
+        <!-- Children's Privacy -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x1F476;</span>
+          <span data-i18n="pp_children_title"></span>
+        </h2>
+        <p data-i18n="pp_children_text" class="text-sv-muted leading-relaxed mb-3"></p>
+
+        <!-- Changes -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x1F504;</span>
+          <span data-i18n="pp_changes_title"></span>
+        </h2>
+        <p data-i18n="pp_changes_text" class="text-sv-muted leading-relaxed mb-3"></p>
+
+        <!-- Contact -->
+        <h2 class="flex items-center gap-2.5 text-xl font-bold text-white mt-9 mb-3">
+          <span>&#x2709;&#xFE0F;</span>
+          <span data-i18n="pp_contact_title"></span>
+        </h2>
+        <p data-i18n="pp_contact_text" class="text-sv-muted leading-relaxed mb-2"></p>
+        <p>
+          <a href="mailto:contact@shardvortex.com" class="text-sv-cyan hover:underline">contact@shardvortex.com</a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/partials.js"></script>
+</body>
+</html>
