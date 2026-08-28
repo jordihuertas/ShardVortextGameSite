@@ -15,6 +15,7 @@
     en: {
       /* Nav */
       nav_home:    'Home',
+      nav_closed_beta: 'Closed Beta Testing',
       nav_privacy: 'Privacy Policy',
       nav_terms:   'Terms & Conditions',
       /* Hero */
@@ -88,6 +89,27 @@
       terms_liability_text: 'The App is provided “as is” and “as available.” To the fullest extent permitted by law, we exclude implied warranties and liability for indirect, incidental, special, or consequential loss. Nothing here limits mandatory consumer rights or liability that law does not allow us to exclude.',
       terms_law_title: 'Applicable Law',
       terms_law_text: 'Applicable law governs these Terms without depriving you of mandatory protections in your country of residence. Courts having jurisdiction under applicable law will resolve disputes.',
+      /* Closed Beta Testing */
+      closed_beta_page_title: 'Closed Beta Testing \u2014 Shard Vortex',
+      closed_beta_eyebrow: 'Help Shape the Game',
+      closed_beta_title: 'Join the Closed Beta',
+      closed_beta_intro: 'Test Shard Vortex before release and help make the game better with your feedback.',
+      closed_beta_signup_title: 'Sign Up for the Closed Beta',
+      closed_beta_signup_text: 'If you would like to participate in the Shard Vortex closed beta, please fill out the registration form.',
+      closed_beta_signup_button: 'Fill Out the Registration Form',
+      closed_beta_download_title: 'Download the Beta',
+      closed_beta_download_text: 'Once you are on the list, download the beta using either of these two methods:',
+      closed_beta_testing_link: 'Join Through the Testing Page',
+      closed_beta_store_link: 'Open Shard Vortex on Google Play',
+      closed_beta_important_title: 'Important: Stay Opted In for 14 Days',
+      closed_beta_important_text: 'Please remain opted into the closed test for at least 14 days. You do not need to play every day, but any time you can spend testing the game would be greatly appreciated.',
+      closed_beta_feedback_title: 'Share Your Feedback',
+      closed_beta_feedback_text: 'If possible, please complete the feedback form after trying the game.',
+      closed_beta_feedback_button: 'Open the Feedback Form',
+      closed_beta_discord_title: 'Join the Shard Vortex Discord',
+      closed_beta_discord_text: 'The Discord server also explains how to join the closed beta, and it is a great place to connect with the community.',
+      closed_beta_discord_button: 'Join the Discord Server',
+      closed_beta_thanks: 'Thank you for helping me test and improve Shard Vortex!',
       terms_contact_title: 'Contact',
       terms_contact_text: 'For questions about these Terms & Conditions, contact us at:',
     },
@@ -95,6 +117,7 @@
     es: {
       /* Nav */
       nav_home:    'Inicio',
+      nav_closed_beta: 'Prueba beta cerrada',
       nav_privacy: 'Pol\u00edtica de Privacidad',
       nav_terms:   'Términos y Condiciones',
       /* Hero */
@@ -166,6 +189,27 @@
       terms_liability_text: 'La App se proporciona “tal cual” y “según disponibilidad”. En la máxima medida legal, excluimos garantías implícitas y responsabilidad por pérdidas indirectas, incidentales, especiales o consecuentes. Nada limita derechos imperativos del consumidor ni responsabilidades que la ley no permita excluir.',
       terms_law_title: 'Ley Aplicable',
       terms_law_text: 'La ley aplicable rige estos Términos sin privarte de las protecciones obligatorias de tu país de residencia. Resolverán las controversias los tribunales competentes conforme a dicha ley.',
+      /* Closed Beta Testing */
+      closed_beta_page_title: 'Prueba beta cerrada \u2014 Shard Vortex',
+      closed_beta_eyebrow: 'Ayuda a mejorar el juego',
+      closed_beta_title: '\u00danete a la beta cerrada',
+      closed_beta_intro: 'Prueba Shard Vortex antes de su lanzamiento y ay\u00fadanos a mejorar el juego con tus comentarios.',
+      closed_beta_signup_title: 'Ap\u00fantate a la beta cerrada',
+      closed_beta_signup_text: 'Si quieres participar en la beta cerrada de Shard Vortex, completa el formulario de inscripci\u00f3n.',
+      closed_beta_signup_button: 'Completar el formulario de inscripci\u00f3n',
+      closed_beta_download_title: 'Descarga la beta',
+      closed_beta_download_text: 'Cuando est\u00e9s en la lista, descarga la beta mediante cualquiera de estos dos m\u00e9todos:',
+      closed_beta_testing_link: 'Unirse desde la p\u00e1gina de pruebas',
+      closed_beta_store_link: 'Abrir Shard Vortex en Google Play',
+      closed_beta_important_title: 'Importante: permanece inscrito durante 14 d\u00edas',
+      closed_beta_important_text: 'Permanece inscrito en la prueba cerrada durante al menos 14 d\u00edas. No necesitas jugar todos los d\u00edas, pero agradeceremos mucho cualquier tiempo que puedas dedicar a probar el juego.',
+      closed_beta_feedback_title: 'Comparte tus comentarios',
+      closed_beta_feedback_text: 'Si es posible, completa el formulario de feedback despu\u00e9s de probar el juego.',
+      closed_beta_feedback_button: 'Abrir el formulario de feedback',
+      closed_beta_discord_title: '\u00danete al Discord de Shard Vortex',
+      closed_beta_discord_text: 'En el servidor de Discord tambi\u00e9n se explica c\u00f3mo unirse a la beta cerrada, y podr\u00e1s conectar con la comunidad.',
+      closed_beta_discord_button: 'Unirse al servidor de Discord',
+      closed_beta_thanks: '\u00a1Gracias por ayudarme a probar y mejorar Shard Vortex!',
       terms_contact_title: 'Contacto',
       terms_contact_text: 'Para preguntas sobre estos Términos y Condiciones, contáctanos en:',
       pp_contact_title:     'Contacto',
@@ -222,8 +266,16 @@
       );
     }
 
-    if (document.body && (document.body.dataset.page === 'privacy' || document.body.dataset.page === 'terms')) {
-      document.title = t[document.body.dataset.page === 'terms' ? 'terms_page_title' : 'pp_page_title'];
+if (document.body) {
+      var pageTitleKeys = {
+        privacy: 'pp_page_title',
+        terms: 'terms_page_title',
+        'closed-beta': 'closed_beta_page_title',
+      };
+      var pageTitleKey = pageTitleKeys[document.body.dataset.page];
+      if (pageTitleKey && t[pageTitleKey]) {
+        document.title = t[pageTitleKey];
+      }
     }
   }
 
