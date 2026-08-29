@@ -18,9 +18,14 @@
       nav_closed_beta: 'Closed Beta Testing',
       nav_privacy: 'Privacy Policy',
       nav_terms:   'Terms & Conditions',
+      nav_main_label: 'Main navigation',
+      logo_alt: 'Shard Vortex logo',
+      lang_select_label: 'Select language',
+      nav_toggle_label: 'Toggle menu',
       /* Hero */
       hero_subtitle:        'Aim, launch, and destroy rows of polygonal enemies. <br>A frantic arcade challenge, ideal for quick games.',
       hero_cta_screenshots: 'View Screenshots',
+      hero_cta_closed_beta: 'Join the Closed Beta',
       hero_cta_learn:       'Learn More',
       scroll_text:          'Scroll',
       /* About */
@@ -43,10 +48,18 @@
       screenshot_open:    'Open screenshot {n}',
       screenshot_img_alt: 'Shard Vortex screenshot {n}',
       screenshot_zoom_alt: 'Screenshot zoomed in',
+      hero_logo_alt: 'Shard Vortex game logo',
+      about_gameplay_alt: 'Shard Vortex gameplay screenshot',
+      lightbox_label: 'Screenshot viewer',
+      lightbox_close: 'Close screenshot viewer',
       /* Footer */
       footer_copy: '\u00a9 {year} Shard Vortex. All rights reserved.',
+      /* Page metadata */
+      home_page_title: 'Shard Vortex',
+      home_meta_description: 'Shard Vortex is a mobile arcade game. Aim, launch, and destroy falling enemy rows in a fast arcade challenge.',
       /* Privacy Policy */
       pp_page_title:        'Privacy Policy \u2014 Shard Vortex',
+      pp_meta_description: 'Read the Shard Vortex Privacy Policy and learn how information is handled when advertising is displayed in the App.',
       pp_title:             'Privacy Policy',
       pp_last_updated:      'Last updated',
       legal_effective_date: 'August 26, 2026',
@@ -72,6 +85,7 @@
       pp_contact_title:     'Contact',
       pp_contact_text:      'If you have any questions or concerns about this Privacy Policy, please feel free to contact us at:',
       terms_page_title: 'Terms & Conditions — Shard Vortex',
+      terms_meta_description: 'Read the Terms & Conditions for using Shard Vortex, including licensing, advertising, virtual rewards, availability, and liability.',
       terms_title: 'Terms & Conditions',
       terms_intro_title: 'Acceptance',
       terms_intro_text: 'By downloading, installing, or using Shard Vortex (“the App”), you agree to these Terms. If you do not agree, do not use the App. A parent or guardian must accept for users who cannot legally do so themselves.',
@@ -91,6 +105,7 @@
       terms_law_text: 'Applicable law governs these Terms without depriving you of mandatory protections in your country of residence. Courts having jurisdiction under applicable law will resolve disputes.',
       /* Closed Beta Testing */
       closed_beta_page_title: 'Closed Beta Testing \u2014 Shard Vortex',
+      closed_beta_meta_description: 'Join the Shard Vortex closed beta, download the test version, and share your feedback.',
       closed_beta_eyebrow: 'Help Shape the Game',
       closed_beta_title: 'Join the Closed Beta',
       closed_beta_intro: 'Test Shard Vortex before release and help make the game better with your feedback.',
@@ -124,9 +139,14 @@
       nav_closed_beta: 'Prueba beta cerrada',
       nav_privacy: 'Pol\u00edtica de Privacidad',
       nav_terms:   'Términos y Condiciones',
+      nav_main_label: 'Navegación principal',
+      logo_alt: 'Logotipo de Shard Vortex',
+      lang_select_label: 'Seleccionar idioma',
+      nav_toggle_label: 'Abrir o cerrar el menú',
       /* Hero */
       hero_subtitle:        'Apunta, lanza y destruye filas de enemigos poligonales. <br>Un desafío arcade frenético, ideal para partidas rápidas.',
       hero_cta_screenshots: 'Ver Capturas',
+      hero_cta_closed_beta: 'Unirse a la beta cerrada',
       hero_cta_learn:       'Más Información',
       scroll_text:          'Desplazar',
       /* About */
@@ -149,10 +169,18 @@
       screenshot_open:    'Abrir captura {n}',
       screenshot_img_alt: 'Captura de Shard Vortex {n}',
       screenshot_zoom_alt: 'Captura ampliada',
+      hero_logo_alt: 'Logotipo del juego Shard Vortex',
+      about_gameplay_alt: 'Captura de la jugabilidad de Shard Vortex',
+      lightbox_label: 'Visor de capturas',
+      lightbox_close: 'Cerrar el visor de capturas',
       /* Footer */
       footer_copy: '\u00a9 {year} Shard Vortex. Todos los derechos reservados.',
+      /* Metadatos de página */
+      home_page_title: 'Shard Vortex',
+      home_meta_description: 'Shard Vortex es un juego arcade para móvil. Apunta, lanza y destruye las filas de enemigos que caen.',
       /* Privacy Policy */
       pp_page_title:        'Política de Privacidad \u2014 Shard Vortex',
+      pp_meta_description: 'Consulta la Política de Privacidad de Shard Vortex y cómo se trata la información cuando la App muestra publicidad.',
       pp_title:             'Política de Privacidad',
       pp_last_updated:      'Última actualización',
       legal_effective_date: '26 de agosto de 2026',
@@ -176,6 +204,7 @@
       pp_changes_title:     'Cambios en Esta Política',
       pp_changes_text:      'Podemos actualizar esta Política de Privacidad en cualquier momento. Cualquier cambio se reflejará en esta página con una fecha de “última actualización” actualizada. Te recomendamos revisar esta política periódicamente. El uso continuado de la App tras los cambios constituye la aceptación de la política revisada.',
       terms_page_title: 'Términos y Condiciones — Shard Vortex',
+      terms_meta_description: 'Consulta los Términos y Condiciones de Shard Vortex, incluida la licencia, publicidad, recompensas y responsabilidad.',
       terms_title: 'Términos y Condiciones',
       terms_intro_title: 'Aceptación',
       terms_intro_text: 'Al descargar, instalar o utilizar Shard Vortex (“la App”), aceptas estos Términos. Si no estás de acuerdo, no utilices la App. Un padre, madre o tutor deberá aceptarlos por los usuarios que legalmente no puedan hacerlo.',
@@ -195,6 +224,7 @@
       terms_law_text: 'La ley aplicable rige estos Términos sin privarte de las protecciones obligatorias de tu país de residencia. Resolverán las controversias los tribunales competentes conforme a dicha ley.',
       /* Closed Beta Testing */
       closed_beta_page_title: 'Prueba beta cerrada \u2014 Shard Vortex',
+      closed_beta_meta_description: 'Únete a la beta cerrada de Shard Vortex, descarga la versión de prueba y comparte tus comentarios.',
       closed_beta_eyebrow: 'Ayuda a mejorar el juego',
       closed_beta_title: '\u00danete a la beta cerrada',
       closed_beta_intro: 'Prueba Shard Vortex antes de su lanzamiento y ay\u00fadanos a mejorar el juego con tus comentarios.',
@@ -273,16 +303,30 @@
         { year: 'numeric', month: 'long', day: 'numeric' }
       );
     }
-
-if (document.body) {
+    if (document.body) {
       var pageTitleKeys = {
+        home: 'home_page_title',
         privacy: 'pp_page_title',
         terms: 'terms_page_title',
         'closed-beta': 'closed_beta_page_title',
       };
-      var pageTitleKey = pageTitleKeys[document.body.dataset.page];
+      var pageDescriptionKeys = {
+        home: 'home_meta_description',
+        privacy: 'pp_meta_description',
+        terms: 'terms_meta_description',
+        'closed-beta': 'closed_beta_meta_description',
+      };
+      var pageName = document.body.dataset.page;
+      var pageTitleKey = pageTitleKeys[pageName];
+      var pageDescriptionKey = pageDescriptionKeys[pageName];
       if (pageTitleKey && t[pageTitleKey]) {
         document.title = t[pageTitleKey];
+      }
+      if (pageDescriptionKey && t[pageDescriptionKey]) {
+        var description = document.querySelector('meta[name="description"]');
+        if (description) {
+          description.setAttribute('content', t[pageDescriptionKey]);
+        }
       }
     }
   }

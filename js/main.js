@@ -8,6 +8,7 @@
   'use strict';
 
   function init() {
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   /* ── Active nav link ─────────────────────────────────────── */
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -27,6 +28,7 @@
       var nowHidden = mobileMenu.classList.toggle('hidden');
       var menuOpen  = !nowHidden;
       navToggle.setAttribute('aria-expanded', String(menuOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!menuOpen));
       /* Animate hamburger bars → ✕ when menu is open */
       var spans = navToggle.querySelectorAll('span');
       if (menuOpen) {
@@ -44,6 +46,7 @@
       link.addEventListener('click', function () {
         mobileMenu.classList.add('hidden');
         navToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
         var spans = navToggle.querySelectorAll('span');
         spans[0].style.transform = '';
         spans[1].style.opacity   = '';
@@ -54,7 +57,7 @@
 
   /* ── Hero Particle Canvas ────────────────────────────────── */
   var canvas = document.getElementById('particlesCanvas');
-  if (canvas) {
+  if (canvas && !prefersReducedMotion) {
     var ctx = canvas.getContext('2d');
     var particles = [];
     var PARTICLE_COUNT = 70;
@@ -102,30 +105,46 @@
   var lightbox      = document.getElementById('lightbox');
   var lightboxImg   = document.getElementById('lightboxImg');
   var lightboxClose = document.getElementById('lightboxClose');
+  var lastFocusedElement = null;
 
   if (lightbox && lightboxImg) {
-    document.querySelectorAll('.grid button').forEach(function (btn) {
+    document.querySelectorAll('#screenshots .grid button').forEach(function (btn) {
       btn.addEventListener('click', function () {
+        lastFocusedElement = btn;
         lightboxImg.src = btn.querySelector('img').src;
         lightbox.classList.remove('hidden');
         lightbox.classList.add('flex');
         document.body.style.overflow = 'hidden';
+        if (lightboxClose) lightboxClose.focus();
       });
     });
 
     function closeLightbox() {
+      if (lightbox.classList.contains('hidden')) return;
       lightbox.classList.add('hidden');
       lightbox.classList.remove('flex');
       document.body.style.overflow = '';
+      if (lastFocusedElement) lastFocusedElement.focus();
     }
+
     if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'Tab' && lightboxClose) {
+        e.preventDefault();
+        lightboxClose.focus();
+      }
+    });
   }
 
   /* ── Scroll Fade-in ──────────────────────────────────────── */
   var fadeEls = document.querySelectorAll('.fade-in');
-  if (fadeEls.length && 'IntersectionObserver' in window) {
+  if (!prefersReducedMotion && fadeEls.length && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
